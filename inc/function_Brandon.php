@@ -1,29 +1,64 @@
 <?php
     
+    class Card {
+        public $name;
+        public $value;
+    }
+    
     class Deck {
-        private $cards;
+        public $cards;
+        public $size;
         
-        public function Deck() {
-            createDeck();
+        function Deck() {
+            $cards = array();
+            $size = 52;
+            $this->createDeck();
         }
         
-        public function createDeck() {
-            $cards = array(52);
+        function createDeck() {
             $suit = array("clubs", "diamonds", "hearts", "spades");
         
-            for ($i = 0; $i < $cards.sizeof(); ++$i) {
-                $name = $suit[$i + 1] + '/' + ($i+1)%13;
-                $cards[$i] = $name;
+            for ($i = 0; $i < $size; $i++) {
+                $card = new Card();
+                $card->name = $suit[$i + 1] + '/' + ($i+1)%13;
+                $card->point = ($i+1)%13;
+                $cards[] = $card;
             }
         }
         
-        public function shuffleDeck() {
+        function printDeck() {
+            echo "Why does this work for '$size' <br />";
+            for ($i = 0; $i < $size; $i++) {
+                echo "And why doesn't this work <br />";
+                $card = $cards[$i];
+                echo $card->name . "  " . $card->value . "<br />";
+            }
+        }
+        
+        function shuffleDeck() {
             shuffle($cards);
         }
         
-        public function drawFromDeck() {
+        function drawFromDeck() {
             return array_pop($cards);
         }
     }
     
+    function testDeck() {
+        $deck = new Deck;
+        $deck->printDeck();
+    }
+    
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+        
+        <?=testDeck()?>
+
+    </body>
+</html>
