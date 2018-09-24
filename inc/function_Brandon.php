@@ -20,19 +20,16 @@
             for ($i = 0; $i < 52; $i++) {
                 $card = new Card();
                 $card->name = 'img/'.$suit[$i/13].'/'.($i%13+1).'.png';
-                $card->point = ($i%13+1);
+                $card->value = ($i%13+1);
                 $this->deck[$i] = $card;
             }
+            shuffle($this->deck);
         }
         
         function printDeck() {
             foreach ($this->deck as $card) {
-                echo "$card->name  $card->point<br />";
+                echo "$card->name  $card->value<br />";
             }
-        }
-        
-        function shuffleDeck() {
-            shuffle($this->deck);
         }
         
         function drawFromDeck() {

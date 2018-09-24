@@ -7,8 +7,6 @@
 //   include 'test_deck.php';
 
 $deck = new Deck();
-// $deck->createDeck();
-$deck->shuffleDeck();
 $players = array("Maryann", "Antonio", "Brandon", "Brett");
 
 function play() {
@@ -42,7 +40,7 @@ function getHand() {
 function displayHand($hand, $total) {
     echo "<div class='hand'>";
     for($i=0; $i<count($hand); $i++) {
-        echo "<img src=\"" . $hand[$i]->name . "\"/>";
+        echo "<img src=\"../" . $hand[$i]->name . "\"/>";
     }
     echo "</div><div class='total'><h3>$total</h3></div></div>";
 }
