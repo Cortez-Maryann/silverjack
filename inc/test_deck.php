@@ -1,33 +1,13 @@
 <?php
-
-class Card {
-   public $cardValue;
-   public $cardFace;
-   public $cardImage;
-}
-
-$deck = createDeck();
-
-function createDeck() {
-    $deck = array();
-    $suits = array("clubs","spades","hearts","diamonds");
-    for ($i=0; $i<=3; $i++) {
-        for ($j=1; $j<=13; $j++) {
-            $card = new Card;
-            $card->cardSuit = $suits[$i];
-            $card->cardValue = $j;
-            $card->cardImage = "../img/".$suits[$i]."/".$j.".png";
-            $deck[] = $card;
-        }
-    }
-    shuffle($deck);
-    return $deck;
-}
+include 'function_Brandon.php';
 
 function displayDeck() {
-    global $deck;
-    foreach ($deck as $card) {
-        echo "<img src=\"" . $card->cardImage . "\"/>";
+    $deck = new Deck();
+    $deck->createDeck();
+    $deck->shuffleDeck();
+    for ($i = 0; $i < 52; ++$i) {
+        $card = $deck->drawFromDeck();
+        echo "<img src=../$card->name>";
     }
 }
 

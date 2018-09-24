@@ -19,7 +19,7 @@
         
             for ($i = 0; $i < 52; $i++) {
                 $card = new Card();
-                $card->name = $suit[$i/13].'/'.($i%13+1);
+                $card->name = 'img/'.$suit[$i/13].'/'.($i%13+1).'.png';
                 $card->point = ($i%13+1);
                 $this->deck[$i] = $card;
             }
@@ -40,21 +40,6 @@
         }
     }
     
-    function testDeck() {
-        $deck = new Deck();
-        $deck->shuffleDeck();
-        for ($i = 0; $i < 48; ++$i) {
-            $card = $deck->drawFromDeck();
-            echo "Drew a $card->name<br />";
-        }
-        echo "Remaining deck:<br />";
-        $deck->printDeck();
-        
-        $deck->createDeck();
-        echo "Newly created deck:<br />";
-        $deck->printDeck();
-    }
-    
 ?>
 
 <!DOCTYPE html>
@@ -63,8 +48,7 @@
         <title> </title>
     </head>
     <body>
-        
-        <?=testDeck()?>
+    
 
     </body>
 </html>
