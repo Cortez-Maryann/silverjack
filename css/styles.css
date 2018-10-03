@@ -1,0 +1,47 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 85%;
+    min-height: 100vh;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+}
+
+.row {
+    height: 125px;
+}
+
+.player-container, .hand, .total {
+    display: inline-block;
+}
+
+.hand img {
+    margin: 0 5px;
+}
+
+.total {
+    position: relative;
+    font-size: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    top: -45px;
+    margin-left: 12px;
+}
+
+.player-container {
+    max-width: 8vw;
+    margin-right: 8px;
+}
+
+.player-img {
+    width: 100%;
+    height: auto;
+}
+
+.player-title {
+    text-align: center;
+    margin: 0.5em auto;
+}
