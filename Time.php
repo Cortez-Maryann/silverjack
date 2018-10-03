@@ -1,31 +1,38 @@
 <?php
 
-
-    function playedGames($gamesPlayed){
-        global $gamesPlayed;
+    session_start();
+    
+    function playedGames(){
         
-        $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0'; //Sees if the page was refreshed
-        
-        if($pageWasRefreshed){
-            $gamesPlayed++;
-        }
-        
-        echo $gamesPlayed;
+         if(!isset($_SESSION['played'])){
+             $_SESSION['played'] = 0;
+         }
+            $_SESSION['played']++;
+    
+        return $_SESSION['played'];
     
     }
     
     $start = microtime(true);
     
-    function displayElapsedTime(){
+    function elapsedTime(){
         global $start;
         $elapsedTime = microtime(true) - $start;
-        echo $elapsedTime;
+        return $elapsedTime;
     }
     
+    function displayAverageTime(){
+        if(!isset($_SESSION['average'])){
+             $_SESSION['average'] = 0;
+         }
+         
+         $time = elapsedTime();
+         $gamesPlayed = playedGames();
+         
+         $_SESSION['average'] += $time;
+         echo ($_SESSION['average'] /= $time);
+    }
     
-
-    
-
 ?>
 
 <!DOCTYPE html>
@@ -35,9 +42,7 @@
     </head>
     <body>
         
-        <?php displayElapsedTime();
-            echo "<hr>";
-            playedGames(0); ?>
+        <?= displayAverageTime() ?>
 
     </body>
 </html>
