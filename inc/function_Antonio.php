@@ -1,7 +1,7 @@
 <?php
     global $totals;
     global $players;
-    
+    global $moreThanOneWinner;
     
     function displayWinner(){
         global $totals;
@@ -9,7 +9,7 @@
         $highestScore=0;
         //this will get the highest score
         foreach ($totals as $value) {
-            if($highestScore<$value){
+            if($highestScore<$value &&$value <=42){
                 $highestScore=$value;
             }
         }
@@ -38,12 +38,17 @@
         
         // added score of all people who didnt win
         $winnersFinalScore;
+        $countr = 0;
         foreach ($totals as $key => $value) {
             foreach ($tiedWinners as $key2 => $value2) {
                 if ($key!=$key2){
+                    $countr++;
                     $winnersFinalScore+=$value;
                 }
             }
+        }
+        if(countr>1){
+            $moreThanOneWinner=true;
         }
     
         // display winners(if there are more than one)

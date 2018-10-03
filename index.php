@@ -14,6 +14,7 @@
     <body>
       <header><h1>SilverJack</h1></header>
         <?php
+          $moreThanOneWinner=false;
           $deck = new Deck();
           $players = array("Maryann", "Antonio", "Brandon", "Brett");
           $totals = array();
