@@ -26,8 +26,14 @@
              $_SESSION['average'] = 0;
          }
          
-         $time = elapsedTime();
+         
          $gamesPlayed = playedGames();
+         echo $gamesPlayed;
+         echo "<br>";
+         
+         $time = elapsedTime();
+         echo $time;
+         echo "<br>";
          
          $_SESSION['average'] += $time;
          echo ($_SESSION['average'] /= $time);
