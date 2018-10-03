@@ -1,27 +1,6 @@
 <?php
     global $totals;
     global $players;
-    // class Card {
-    //     public $suit;
-    //     public $value;
-    // }
-    // $values = range(0,51);
-    // $suits = array("hearts","spades", "clubs","diamonds");
-    // $deck = [];
-    
-    // function makeDeck(){
-    //     for($i = 0; $i < 4;$i++){
-    //         for($j = 0; $j<13; $j++) {
-    //             $n = new Card;
-    //             $n->$suit = $suits[$i];
-    //             $n->$value = $i;
-    //             array_push($deck,$n);
-    //             //$deck[] = $n;
-    //         }
-    //     }
-        
-    // }
-    
     
     
     function displayWinner(){
@@ -74,14 +53,3 @@
     }
 
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>php</title>
-    </head>
-    
-    <body>
-        <?= display() ?>
-    </body>
-</html>
