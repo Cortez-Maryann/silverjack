@@ -1,0 +1,9 @@
+[19-Sep-2018 22:24:56 UTC] PHP Fatal error:  Cannot access empty property in /home/ubuntu/workspace/silverjack/silverjack/inc/function_Antonio.php on line 14
+[19-Sep-2018 22:24:56 UTC] PHP Stack trace:
+[19-Sep-2018 22:24:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/silverjack/silverjack/inc/function_Antonio.php:0
+[19-Sep-2018 22:24:56 UTC] PHP   2. display() /home/ubuntu/workspace/silverjack/silverjack/inc/function_Antonio.php:51
+[19-Sep-2018 22:24:56 UTC] PHP   3. makeDeck() /home/ubuntu/workspace/silverjack/silverjack/inc/function_Antonio.php:24
+[19-Sep-2018 22:27:19 UTC] PHP Fatal error:  Cannot access empty property in /home/ubuntu/workspace/silverjack/silverjack/inc/function_Antonio.php on line 14
+[19-Sep-2018 22:27:19 UTC] PHP Stack trace:
+[19-Sep-2018 22:27:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/silverjack/silverjack/inc/function_Antonio.php:0
+[19-Sep-2018 22:27:19 UTC] PHP   2. makeDeck() /home/ubuntu/workspace/silverjack/silverjack/inc/function_Antonio.php:22
