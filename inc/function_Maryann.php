@@ -26,29 +26,26 @@
              $_SESSION['average'] = 0;
          }
          
-         
          $gamesPlayed = playedGames();
-         echo $gamesPlayed;
-         echo "<br>";
+         echo "<h4>Matches Played: $gamesPlayed</h4>";
          
          $time = elapsedTime();
-         echo $time;
-         echo "<br>";
+         echo "<h4>Elapsed Time: ".$time."s</h4>";
          
          $_SESSION['average'] += $time;
-         echo ($_SESSION['average'] /= $time);
+         echo "<h4>Average Time: ".($_SESSION['average'] /= $time)."s</h4>";
     }
     
 ?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> </title>
-    </head>
-    <body>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--    <head>-->
+<!--        <title> </title>-->
+<!--    </head>-->
+<!--    <body>-->
         
-        <?= displayAverageTime() ?>
+<!--        <?= displayAverageTime() ?>-->
 
-    </body>
-</html>
+<!--    </body>-->
+<!--</html>-->
