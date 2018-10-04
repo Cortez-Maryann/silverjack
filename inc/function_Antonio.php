@@ -10,13 +10,16 @@
         $everyPlayerScoreAdded = 0;
         //this will get the highest score
         foreach ($totals as $playerScore) {
-            if($highestScore<$value &&$value <=42){
-                $highestScore=$value;
+            if($highestScore<$playerScore &&$playerScore <=42){
+                $highestScore=$playerScore;
             }
             $everyPlayerScoreAdded+=$playerScore;
         }
-
-    
+        // echo "highest score :". $highestScore;
+        // echo "<br>";
+        // echo "<br>";
+        // echo "<br>";
+        
         //next we have to check if there are multiple winners. If there are, all winners will 
         // be added to $tiedWinners
         // $winnersNames = array();
@@ -53,10 +56,15 @@
         if(count($tiedWinners)>1){
             $moreThanOneWinner=true;
         }
+        // echo "amount of winners: ".count($tiedWinners);
+        // echo "<br>";
 
         // display winners(if there are more than one)
+        // echo "all scores added: ".$everyPlayerScoreAdded;
+        // echo "<br>";
         foreach ($tiedWinners as $key=>$value) {
-            echo $key. " has the score of ". $everyPlayerScoreAdded-(count($tiedWinners)*$highestScore);
+            // echo "hello";
+            echo $key. " has the score of ". ($everyPlayerScoreAdded-(count($tiedWinners)*$highestScore));
             echo "<br>";
         }
     }
