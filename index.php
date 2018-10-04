@@ -1,5 +1,6 @@
 <?php
   include './inc/function_Antonio.php';
+  include './inc/function_Maryann.php';
   include './inc/function_Brandon.php';
   include './inc/function_Brett.php';
 ?>
@@ -34,6 +35,10 @@
                 displayHand($hand, $total);
                 echo "</div>";
             }
+            echo "<div class='winner-container'><h2>";
+            displayWinner();
+            echo "</h2></div>";
+            displayAverageTime();
           }
           play();
         ?>
