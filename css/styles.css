@@ -1,37 +1,11 @@
 body {
-<<<<<<< HEAD
-    background:url(../img/qbkls.png);
-    font-family: retro;
-}
-
-#pageTitle{
-    text-align:center;
-    font-size:2.0em;
-    border: 5px solid black;
-    background-color: goldenrod;
-}
-
-@font-face {
-    font-family: retro;
-    src: url(../img/dpcomic.ttf);
-}
-
-h2{
-    text-align:center;
-    font-size:1.8em;
-    /*width:50px; */
-    float:left; 
-    /*padding-top:20px; */
-    padding-left:100px;
-    
-    
-=======
-    background: linear-gradient(#000000BA, #000000CA), url('../img/bg.jpg') no-repeat center ;
+    background:url(../img/qbkls.png) no-repeat center;
+    font-family: retro; 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: rgba(255,255,255,0.85);
-    font-family: 'Montserrat', sans-serif;
+    color: rgba(0,0,0,0.85);
+    /*font-family: 'Montserrat', sans-serif;*/
     width: 85%;
     min-height: 100vh;
     margin: auto;
@@ -39,7 +13,7 @@ h2{
 }
 
 h1 {
-    color: white;
+    color: black;
     font-size: 2.8em;
     text-align: center;
 }
@@ -83,7 +57,7 @@ h1 {
 }
 
 .winner-container {
-    color: rgba(255,255,255,0.95);
+    color: rgba(0,0,0,0.95);
     font-size: 1.25em;
     text-align: center;
     margin-bottom: 2em;
@@ -93,5 +67,9 @@ h1 {
     /*text-align: center;*/
     line-height: 10px;
     margin: 0.25em auto;
->>>>>>> 2c12f20766d58d215fc81b57d7a48b80f997d232
+}
+
+@font-face {
+    font-family: retro;
+    src: url(../img/dpcomic.ttf);
 }
